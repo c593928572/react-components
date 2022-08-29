@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/components/index.tsx"),
-      name: "Gantt",
-      fileName: "gantt",
+      name: "ReactComponents",
+      fileName: (format) => `react-components.${format}.js`,
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖

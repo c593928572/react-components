@@ -6,6 +6,15 @@
   "author": "LWJ",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/react-components.umd.cjs",
+  "module": "./dist/react-components.es.js",
+  "typings": "./dist/components/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-components.es.js",
+      "require": "./dist/react-components.umd.cjs"
+    }
+  },
   "scripts": {
     "start": "vite",
     "build": "vite build && tsc --declaration --emitDeclarationOnly",
